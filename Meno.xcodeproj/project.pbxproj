@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7599FA562DD685140072E3CA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7599FA552DD685140072E3CA /* Lottie */; };
+		7599FA5D2DD891400072E3CA /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7599FA5C2DD891400072E3CA /* DotLottie */; };
+		7599FA762DDA33540072E3CA /* VoidNet in Frameworks */ = {isa = PBXBuildFile; productRef = 7599FA752DDA33540072E3CA /* VoidNet */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		75240C102DBA816700832C29 /* Meno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7599FA762DDA33540072E3CA /* VoidNet in Frameworks */,
+				7599FA562DD685140072E3CA /* Lottie in Frameworks */,
+				7599FA5D2DD891400072E3CA /* DotLottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,9 @@
 			);
 			name = Meno;
 			packageProductDependencies = (
+				7599FA552DD685140072E3CA /* Lottie */,
+				7599FA5C2DD891400072E3CA /* DotLottie */,
+				7599FA752DDA33540072E3CA /* VoidNet */,
 			);
 			productName = Meno;
 			productReference = 75240C102DBA816700832C29 /* Meno.app */;
@@ -94,6 +106,11 @@
 			);
 			mainGroup = 75240C072DBA816700832C29;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7599FA542DD685140072E3CA /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				7599FA5B2DD891400072E3CA /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
+				7599FA742DDA33540072E3CA /* XCRemoteSwiftPackageReference "VoidNet" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 75240C112DBA816700832C29 /* Products */;
 			projectDirPath = "";
@@ -324,6 +341,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7599FA542DD685140072E3CA /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+		7599FA5B2DD891400072E3CA /* XCRemoteSwiftPackageReference "dotlottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LottieFiles/dotlottie-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		7599FA742DDA33540072E3CA /* XCRemoteSwiftPackageReference "VoidNet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WhereIsPumpkin/VoidNet.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7599FA552DD685140072E3CA /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7599FA542DD685140072E3CA /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		7599FA5C2DD891400072E3CA /* DotLottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7599FA5B2DD891400072E3CA /* XCRemoteSwiftPackageReference "dotlottie-ios" */;
+			productName = DotLottie;
+		};
+		7599FA752DDA33540072E3CA /* VoidNet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7599FA742DDA33540072E3CA /* XCRemoteSwiftPackageReference "VoidNet" */;
+			productName = VoidNet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75240C082DBA816700832C29 /* Project object */;
 }

@@ -1,0 +1,33 @@
+{
+  "originHash" : "17c2454ddf64ebe49ffc5e26ad9e4836ceee895c7e717db901dc3d4101155c8f",
+  "pins" : [
+    {
+      "identity" : "dotlottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/LottieFiles/dotlottie-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ac5c27f6be0727fc2cdb0e16a90270f59a3ada03"
+      }
+    },
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios",
+      "state" : {
+        "revision" : "047aa81b77adcbf583a966dfef620d17650cc656",
+        "version" : "4.5.1"
+      }
+    },
+    {
+      "identity" : "voidnet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WhereIsPumpkin/VoidNet.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "12ae3d74feb0c4dc58fdf68fe6f43fdce619b346"
+      }
+    }
+  ],
+  "version" : 3
+}
