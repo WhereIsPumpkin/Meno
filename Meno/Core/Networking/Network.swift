@@ -16,15 +16,15 @@ final class Network {
     private init() {}
     
     func sendAPIRequest<T: Decodable>(
-        scheme: Scheme = .https,
-        host: String,
-        port: Int? = nil,
+        scheme: Scheme = .http,
+        host: String = Constants.apiURL,
+        port: Int? = Constants.apiPort,
         path: String,
-        query: Query = .emptyQuery,
+        query: VoidNet.Query = .emptyQuery,
+        headers: VoidNet.Headers = .emptyHeaders,
+        body: VoidNet.Body = .emptyBody,
         method: HTTPMethod = .get,
-        headers: [String: String] = [:],
-        body: Data? = nil,
-        as type: T.Type
+        type: T.Type = EmptyData.self
     ) async throws -> T {
         let endpoint = EndPoint(
             scheme: scheme,
@@ -32,9 +32,9 @@ final class Network {
             port: port,
             path: path,
             query: query,
-            method: method,
             headers: headers,
-            body: body
+            body: body,
+            method: method
         )
         
         return try await voidNet.request( endpoint: endpoint, type: type )

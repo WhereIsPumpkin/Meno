@@ -7,5 +7,5 @@
 
 enum CreateQuizPath: Hashable {
     case root
-    case loader
+    case quizFormat
 }

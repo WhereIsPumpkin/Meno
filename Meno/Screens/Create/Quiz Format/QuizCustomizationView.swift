@@ -17,9 +17,7 @@ struct QuizCustomizationView: View {
         ZStack {
             backgroundView
             
-            ScrollView {
-                contentContainer
-            }
+            contentContainer
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -183,7 +181,7 @@ struct QuizCustomizationView: View {
     @ViewBuilder
     private var actionButton: some View {
         Button("Next") {
-            appViewModel.createQuizPath.append(.loader)
+            viewModel.generateQuiz()
         }
         .buttonStyle(.primary)
     }

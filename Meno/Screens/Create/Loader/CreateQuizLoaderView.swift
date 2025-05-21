@@ -133,8 +133,3 @@ struct CreateQuizLoaderView: View {
             .multilineTextAlignment(.center)
     }
 }
-
-#Preview {
-    CreateQuizLoaderView()
-        .environment(AppViewModel())
-}

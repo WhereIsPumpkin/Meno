@@ -25,11 +25,12 @@ struct CreateQuizView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar { centerToolbarItem }
         .animation(.default, value: viewModel.isPasteTextSelected)
+        .onAppear { viewModel.onAppear(appViewModel) }
         .navigationDestination(for: CreateQuizPath.self) { path in
             switch path {
             case .root:
                 CreateQuizView()
-            case .loader:
+            case .quizFormat:
                 QuizCustomizationView()
             }
         }
@@ -103,7 +104,7 @@ struct CreateQuizView: View {
     private var actionButton: some View {
         if viewModel.isPasteTextSelected {
             Button("Next") {
-                appViewModel.createQuizPath.append(.loader)
+                viewModel.onContinue()
             }
             .buttonStyle(.primary)
         }
@@ -126,7 +127,7 @@ struct CreateQuizView: View {
     }
     
     private var previewTextBox: some View {
-        CustomTextEditor(text: $viewModel.previewText)
+        CustomTextEditor(text: .constant(""))
             .frame(maxWidth: .infinity, minHeight: 120)
             .padding(.horizontal, 12)
             .padding(.top, 8)

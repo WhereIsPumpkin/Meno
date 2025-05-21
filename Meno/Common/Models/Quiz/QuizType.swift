@@ -5,12 +5,12 @@
 //  Created by Saba Gogrichiani on 18.05.25.
 //
 
-enum QuizType: String, CaseIterable, Identifiable {
-    case multipleChoice = "Multiple Choice"
+enum QuizType: String, CaseIterable, Identifiable, Codable {
+    case multipleChoice = "multipleChoice"
     case trueFalse = "True/False"
-    case fillInTheBlank = "Fill in the Blank"
+    case fillInTheBlank = "FillBlank"
     case matching = "Matching"
-    case mixedMode = "Mixed Mode"
+    case mixedMode = "MixedMode"
     
     var id: String { self.rawValue }
     
